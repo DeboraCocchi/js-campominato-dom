@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/flowers-orange.png" />
   <link rel="stylesheet" href="css/style.css">
   <title>Campominato-DOM</title>
 </head>
@@ -11,17 +12,45 @@
   <div class="main-wrapper">
     <div class="start-container">
       <select name="rows-number" id="select-rows">
-            <option value="10">Easy</option>
-            <option value="9">Hard</option>
-            <option value="7">Crazy</option>
+            <option value="20">Easy (20x20)</option>
+            <option value="18">Hard (18x18)</option>
+            <option value="12">Crazy (12x12)</option>
             
           </select>
         
           <button id="create-squares">Iniziamo!</button>
-      <h4 id="result"></h4>
+      
   
     </div> 
-    <div class="container hide"></div>
+
+    <div class="main-game-container hide">
+    
+      <div class="rules hide">
+        <h4>Regole:</h4>
+        <p>Evita le celle con le bombe e completa il gioco!</p>
+        
+        <p>Per contrassegnare la cella con una bandierina clicca contemporaneamente <strong>shift + tasto sx</strong></p>
+        
+        <h5>Bandierine assegnate:</h5>
+        <div class="rules-row hide">
+        
+          <img src="img/flying-flag.png" alt="flag">
+          <p class="row"> <span id="flags"></span>/ 40</strong></p>
+        </div>
+        <h5>Il tuo punteggio:</h5>
+        <p><span id="score"></span> punti</p>
+        <button class="btn-newgame" id="new" disabled>Nuova Partita</button>
+
+      </div>
+      <div class="">
+        <h4 id="result" class="hide"></h4>
+        <div class="container hide"></div>
+      </div>
+      
+        
+      </div>
+    </div>
+   
 
   </div>
   
